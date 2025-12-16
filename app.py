@@ -88,7 +88,7 @@ total_hours = st.number_input(
 )
 
 if total_hours > 58:
-    st.warning("Studying more than 100 hours a week may be unrealistic. Pace yourself.")
+    st.warning("Studying more than 58 hours a week may be unrealistic. Pace yourself.")
 
 
 
