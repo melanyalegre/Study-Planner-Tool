@@ -81,9 +81,15 @@ else:
 total_hours = st.number_input(
     "Total study hours you have this week:",
     min_value=1.0,
+    max_value=168.0,
     value=15.0,
     step=1.0
 )
+
+if total_hours > 100:
+    st.warning("Studying more than 100 hours a week may be unrealistic. Pace yourself.")
+
+
 
 days_options = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 study_days = st.multiselect("Which days can you study?", days_options, default=days_options[:5])
